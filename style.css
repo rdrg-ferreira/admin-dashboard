@@ -1,0 +1,155 @@
+:root {
+    --primary-color: #faf7f7;
+    --secondary-color: rgb(24, 173, 231);
+    --fill-color: rgb(228, 226, 226);
+    --box-shadow-color: rgba(128,128,128,0.6);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: minmax(min-content, 275px) 1fr;
+}
+
+.sidebar {
+    background-color: var(--secondary-color);
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    gap: 60px;
+    padding: 16px;
+}
+
+.sidebar img {
+    filter: invert(95%) sepia(2%) saturate(280%) hue-rotate(202deg) brightness(103%) contrast(97%);
+    width: 30px;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+}
+
+.sidebar > .features > *,
+.sidebar > .help > *,
+.sidebar > .title {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 60px;
+    gap: 16px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.sidebar > .title {
+    font-size: 1.5rem;
+}
+
+.sidebar > .title > img {
+    width: 60px;
+    height: auto;
+}
+
+.sidebar > .section span {
+    color: var(--primary-color);
+    align-self: center;
+    justify-self: left;
+}
+
+.sidebar > .section button {
+    background: none;
+    border: none;
+}
+
+.main-panel > header {
+    display: grid;
+    grid-template-rows: 60px 60px;
+    padding: 16px 32px;
+    box-shadow: 0px 4px 3px 0px var(--box-shadow-color);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-panel img.user-icon {
+    width: 48px;
+    height: auto;
+}
+
+.header-top > .search {
+    display: flex;
+    gap: 16px;
+    margin-right: 32px;
+}
+
+.header-top > .search > #search_button,
+.header-top > .user-data > #notifications_button {
+    flex-basis: 1.75rem;
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    padding-top: 3px;
+}
+
+.header-top > .search > #search-input {
+    border-radius: 20px;
+    border: none;
+    background-color: var(--fill-color);
+    padding: 4px 16px;
+    width: clamp(5vw, 30vw, 400px);
+}
+
+.user-data {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.header-top > .user-data > #notifications_button {
+    flex-basis: 1.5rem;
+    padding-top: 6px;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-greetings {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 16px;
+}
+
+.user-greetings > img.user-icon {
+    width: 56px;
+    height: auto;
+}
+
+.user-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.user-actions > button {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    border: none;
+    flex: 1 0 100px;
+    padding: 12px 20px;
+    color: var(--primary-color);
+}
