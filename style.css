@@ -1,8 +1,8 @@
 :root {
     --primary-color: #faf7f7;
     --secondary-color: rgb(8, 153, 211);
-    --fill-color: rgb(228, 226, 226);
-    --box-shadow-color: rgba(128,128,128,0.6);
+    --fill-color: rgb(230, 230, 230);
+    --box-shadow-color: rgba(128, 128, 128, 0.6);
 }
 
 * {
@@ -19,7 +19,7 @@ body {
 
 body {
     display: grid;
-    grid-template-columns: minmax(min-content, 275px) 1fr;
+    grid-template-columns: minmax(min-content, 250px) 1fr;
 }
 
 .sidebar {
@@ -75,6 +75,8 @@ body {
     grid-template-rows: 60px 60px;
     padding: 16px 32px;
     box-shadow: 0px 4px 3px 0px var(--box-shadow-color);
+    position: relative;
+    z-index: 1;
 }
 
 .header-top {
@@ -153,4 +155,61 @@ body {
     flex: 1 0 100px;
     padding: 12px 20px;
     color: var(--primary-color);
+    font-weight: bold;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    gap: 12px;
+    padding: 24px;
+    background-color: var(--fill-color);
+}
+
+.left-main {
+    display: grid;
+    gap: 8px;
+    grid-template-rows: min-content 1fr;
+}
+
+.left-main img {
+    width: 24px;
+    height: auto;
+}
+
+.left-main > .heading,
+.left-main .item-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: max-content;
+    gap: 24px;
+}
+
+.item-container > .item {
+    border-radius: 10px;
+    border-left: 10px solid orange;
+    background-color: var(--primary-color);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.item-container > .item > .text {
+    font-size: 0.8rem;
+    color: gray;
+    font-weight: 500;
+}
+
+.item-container > .item > .item-options {
+    display: flex;
+    gap: 16px;
+    justify-self: end;
+    justify-content: right;
+    margin-top: 16px;
 }
