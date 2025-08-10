@@ -1,6 +1,6 @@
 :root {
     --primary-color: #faf7f7;
-    --secondary-color: rgb(24, 173, 231);
+    --secondary-color: rgb(8, 153, 211);
     --fill-color: rgb(228, 226, 226);
     --box-shadow-color: rgba(128,128,128,0.6);
 }
@@ -71,6 +71,7 @@ body {
 
 .main-panel > header {
     display: grid;
+    gap: 8px;
     grid-template-rows: 60px 60px;
     padding: 16px 32px;
     box-shadow: 0px 4px 3px 0px var(--box-shadow-color);
@@ -107,7 +108,7 @@ body {
     border: none;
     background-color: var(--fill-color);
     padding: 4px 16px;
-    width: clamp(5vw, 30vw, 400px);
+    width: clamp(5vw, 30vw, 600px);
 }
 
 .user-data {
